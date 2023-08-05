@@ -36,7 +36,7 @@ CREATE TABLE bikes (
 
 CREATE TABLE orders (
     order_id INT AUTO_INCREMENT,
-    customer_id VARCHAR(255) NOT NULL,
+    customer_id INT NOT NULL,
     bike_id INT NOT NULL,
     initial_dock_id INT NOT NULL,
     return_dock_id INT NOT NULL, 
