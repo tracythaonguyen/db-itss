@@ -1,5 +1,6 @@
 CREATE TABLE customers (
-    customer_id VARCHAR(255) NOT NULL,
+    customer_id INT AUTO_INCREMENT, 
+    customer_card VARCHAR(255) NOT NULL UNIQUE,
     customer_name VARCHAR(255) NOT NULL,
     PRIMARY KEY (customer_id)
 );
@@ -25,7 +26,6 @@ CREATE TABLE bikes (
     bike_type VARCHAR(255) NOT NULL,
     bike_color VARCHAR(255),
     bike_status INT DEFAULT 0,
-    renting_fee DECIMAL(10, 2) NOT NULL,
     CHECK(bike_status IN (0, 1, 2, 3)),
     dock_id INT NOT NULL,
     PRIMARY KEY (bike_id),
